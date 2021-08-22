@@ -2,10 +2,10 @@ pipeline {
     agent any
     environment {
         //be sure to replace "willbla" with your own Docker Hub username
-       // DOCKER_IMAGE_NAME = "santoshsubs/train-schedule"
+        DOCKER_IMAGE_NAME = "santoshsubs/train-schedule"
     }
     stages {
-      /*  stage('Build') {
+        stage('Build') {
             steps {
                 echo 'Running build automation'
                 sh './gradlew build --no-daemon'
@@ -37,7 +37,7 @@ pipeline {
                     }
                 }
             }
-        } */
+        } 
  stage('DeployToProduction') {
             when {
                 branch 'master'
